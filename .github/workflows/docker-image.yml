@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches:
-      - main # Change this to your default branch
+      - main
 
 jobs:
   build:
@@ -27,5 +27,5 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm/v7
+          platforms: linux/amd64,linux/arm/v7,linux/arm64
           tags: your-dockerhub-username/rpi-temperature-monitor:latest
