@@ -1,0 +1,13 @@
+{
+  "name": "rpi-temperature-monitor",
+  "version": "1.0.0",
+  "description": "Node.js + Express app to read Raspberry Pi temperature",
+  "main": "rpi_temperature.js",
+  "scripts": {
+    "start": "node rpi_temperature.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "prom-client": "^11.5.3"
+  }
+}

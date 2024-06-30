@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  rpi-temperature-monitor:
+    build: .
+    ports:
+      - ${PORT}:36363
+    volumes:
+      - /sys/class/thermal/thermal_zone0/temp:/usr/src/app/temp:ro
+    environment:
+      INTERVAL: ${INTERVAL}
+    restart: unless-stopped
